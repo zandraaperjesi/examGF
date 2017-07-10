@@ -22,4 +22,9 @@ public class MainTest {
   void findCommonLettersFindNone() {
     assertEquals(0, Main.findCommonLetters("abcd", "efgh").length);
   }
+
+  @Test
+  void findCommonLettersFindUpperCase() {
+    assertEquals('e', Main.findCommonLetters("abcde", "EFGHI")[0]);
+  }
 }

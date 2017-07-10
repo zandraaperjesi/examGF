@@ -8,10 +8,12 @@ public class Main {
 
   static char[] findCommonLetters(String firstString, String secondString) {
     List<Character> buffer = new ArrayList<>();
-    for (int i = 0; i < firstString.length(); i++) {
-      for (int j = 0; j < secondString.length(); j++) {
-        if(firstString.charAt(i) == secondString.charAt(j) && !buffer.contains(firstString.charAt(i))) {
-          buffer.add(firstString.charAt(i));
+    String firstToLOwer = firstString.toLowerCase();
+    String secondToLower = secondString.toLowerCase();
+    for (int i = 0; i < firstToLOwer.length(); i++) {
+      for (int j = 0; j < secondToLower.length(); j++) {
+        if(firstToLOwer.charAt(i) == secondToLower.charAt(j) && !buffer.contains(firstToLOwer.charAt(i))) {
+          buffer.add(firstToLOwer.charAt(i));
         }
       }
     }
