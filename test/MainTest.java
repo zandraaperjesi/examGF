@@ -14,8 +14,12 @@ public class MainTest {
   }
 
   @Test
-  void findThirdOutOfOrder() {
+  void findCommonLettersFindThirdOutOfOrder() {
     assertEquals('c', Main.findCommonLetters("abcd", "cdba")[2]);
   }
-  
+
+  @Test
+  void findCommonLettersFindNone() {
+    assertEquals(0, Main.findCommonLetters("abcd", "efgh").length);
+  }
 }
